@@ -1,0 +1,15 @@
+{
+  "name": "vue3-toimc-admin-doc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/toimc-team/vue3-toimc-admin-doc",
+  "author": "Forest <767425412lin@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.39"
+  }
+}
