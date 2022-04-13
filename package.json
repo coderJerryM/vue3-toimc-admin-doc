@@ -4,12 +4,30 @@
   "repository": "https://github.com/toimc-team/vue3-toimc-admin-doc",
   "author": "Forest <767425412lin@gmail.com>",
   "license": "GPL-3.0",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src",
     "lint": "prettier --write \"src/**/*.{js,json,vue,html,md}\""
   },
   "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-beta.39",
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.38",
+    "@vuepress/plugin-container": "^2.0.0-beta.38",
+    "@vuepress/plugin-docsearch": "^2.0.0-alpha.1",
+    "@vuepress/plugin-external-link-icon": "^2.0.0-beta.38",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.38",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.38",
+    "@vuepress/plugin-nprogress": "^2.0.0-beta.38",
+    "@vuepress/plugin-prismjs": "^2.0.0-beta.38",
+    "@vuepress/plugin-pwa": "^2.0.0-beta.38",
+    "@vuepress/plugin-pwa-popup": "^2.0.0-beta.38",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.38",
+    "@vuepress/plugin-search": "^2.0.0-beta.38",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.38",
+    "@vuepress/plugin-theme-data": "^2.0.0-beta.38",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^16.0.3",
