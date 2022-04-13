@@ -8,7 +8,7 @@ actions:
   - text: Get Started 👉
     link: /guide/
   - text: preview
-    link: https://github.com/toimc-team/vue3-toimc-admin
+    link: https://github.com/toimc-team/vue3-toimc-admin-doc
     type: secondary
 features:
   - title: 💡 最新技术栈

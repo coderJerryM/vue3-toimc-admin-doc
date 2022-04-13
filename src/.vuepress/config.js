@@ -3,7 +3,10 @@ const navbar = [
   { text: '组件', link: '/components/' },
   { text: '常用hook', link: '/hooks/' },
   { text: '关于', link: '/about/' },
-  { text: '在线预览', link: 'https://github.com/toimc-team/vue3-toimc-admin' },
+  {
+    text: '在线预览',
+    link: 'https://github.com/toimc-team/vue3-toimc-admin-doc'
+  },
   { text: 'Github', link: 'https://github.com/toimc-team/vue3-toimc-admin' }
 ]
 const sidebar = [{ '/components/': [{ text: '', link: '/' }] }]
@@ -14,7 +17,7 @@ const configs = {
   title: 'vue-toimc-admin',
   description:
     'vue-toimc-admin 目标是为中大型项目开发，提供现成的开箱解决方案及丰富的示例',
-  base: '/vue-toimc-admin/',
+  base: '/vue3-toimc-admin-doc/',
   dest: `${process.cwd()}/dist`, // 输出目录
   sidebarDepth: 3, // 侧边栏显示深度，默认为1，最大为3，可以显示当前级别以及子级别
   searchMaxSuggestions: 10, // 搜索结果显示最大数
@@ -24,7 +27,7 @@ const configs = {
   docsDir: 'src',
 
   head: [
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['link', { rel: 'manifest', href: 'manifest.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }]
   ],
 
