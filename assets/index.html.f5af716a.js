@@ -1,1 +1,0 @@
-const t={key:"v-fd354a90",path:"/hooks/",title:"\u5E38\u7528hooks",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1649869941e3,contributors:[{name:"toimc",email:"brian@toimc.com",commits:1}]},filePathRelative:"hooks/index.md"};export{t as data};
