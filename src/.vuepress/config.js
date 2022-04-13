@@ -4,7 +4,7 @@ const navbar = [
   { text: '常用hook', link: '/hooks/' },
   { text: '关于', link: '/about/' },
   {
-    text: '在线预览',
+    text: '预览',
     link: 'https://github.com/toimc-team/vue3-toimc-admin-doc'
   },
   { text: 'Github', link: 'https://github.com/toimc-team/vue3-toimc-admin' }
