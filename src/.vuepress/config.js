@@ -1,12 +1,6 @@
-const navbar = [
-  { text: '指南', link: '/guide/' },
-  { text: '组件', link: '/components/' },
-  { text: '常用hook', link: '/hooks/' },
-  { text: '关于', link: '/about/' },
-  { text: '在线预览', link: 'https://github.com/toimc-team/vue3-toimc-admin' },
-  { text: 'Github', link: 'https://github.com/toimc-team/vue3-toimc-admin' }
-]
-const sidebar = [{ '/components/': [{ text: '', link: '/' }] }]
+const viteImagemin = require('vite-plugin-imagemin')
+const sidebar = require('./configs/sidebar')
+const navbar = require('./configs/navbar')
 
 const configs = {
   // 站点配置
@@ -16,12 +10,6 @@ const configs = {
     'vue-toimc-admin 目标是为中大型项目开发，提供现成的开箱解决方案及丰富的示例',
   base: '/vue-toimc-admin/',
   dest: `${process.cwd()}/dist`, // 输出目录
-  sidebarDepth: 3, // 侧边栏显示深度，默认为1，最大为3，可以显示当前级别以及子级别
-  searchMaxSuggestions: 10, // 搜索结果显示最大数
-  lastUpdate: '上次更新',
-  editLink: true,
-  editLinkText: '在 GitHub 上编辑此页',
-  docsDir: 'src',
 
   head: [
     ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
@@ -34,7 +22,35 @@ const configs = {
   // Vite 打包工具的配置项
   bundlerConfig: {
     viteOptions: {
-      plugins: []
+      plugins: [
+        viteImagemin({
+          gifsicle: {
+            optimizationLevel: 7,
+            interlaced: false
+          },
+          optipng: {
+            optimizationLevel: 7
+          },
+          mozjpeg: {
+            quality: 20
+          },
+          pngquant: {
+            quality: [0.8, 0.9],
+            speed: 4
+          },
+          svgo: {
+            plugins: [
+              {
+                name: 'removeViewBox'
+              },
+              {
+                name: 'removeEmptyAttrs',
+                active: false
+              }
+            ]
+          }
+        })
+      ]
     }
   },
 
@@ -49,7 +65,7 @@ const configs = {
       '@vuepress/plugin-nprogress',
       '@vuepress/plugin-register-components',
       '@vuepress/pwa',
-      ['@vuepress/plugin-pwa'],
+      '@vuepress/plugin-pwa',
       '@vuepress/plugin-pwa-popup',
       '@vuepress/plugin-prismjs',
       '@vuepress/plugin-shiki',
@@ -81,9 +97,31 @@ const configs = {
   // 主题和它的配置
   theme: '@vuepress/theme-default',
   themeConfig: {
-    logo: '/images/logo.jpeg',
+    logo: '/images/toimc-logo.png',
     navbar,
-    sidebar
+    sidebar,
+    sidebarDepth: 3, // 侧边栏显示深度，默认为1，最大为3，可以显示当前级别以及子级别
+    searchMaxSuggestions: 10, // 搜索结果显示最大数
+    lastUpdatedText: '上次更新',
+    contributorsText: '贡献者',
+    tip: '提示',
+    warning: '注意',
+    danger: '警告',
+
+    // 404 page
+    notFound: [
+      '这里什么都没有',
+      '我们怎么到这来了？',
+      '这是一个 404 页面',
+      '看起来我们进入了错误的链接'
+    ],
+    backToHome: '返回首页',
+
+    // a11y
+    openInNewWindow: '在新窗口打开',
+    toggleDarkMode: '切换模式',
+    toggleSidebar: '切换侧边栏',
+    docsDir: 'src'
   }
 }
 
