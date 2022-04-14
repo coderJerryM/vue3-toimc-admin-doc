@@ -8,11 +8,11 @@ const configs = {
   title: 'vue-toimc-admin',
   description:
     'vue-toimc-admin 目标是为中大型项目开发，提供现成的开箱解决方案及丰富的示例',
-  base: '/vue-toimc-admin/',
+  base: '/vue-toimc-admin-doc/',
   dest: `${process.cwd()}/dist`, // 输出目录
 
   head: [
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['link', { rel: 'manifest', href: 'manifest.webmanifest' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }]
   ],
 
