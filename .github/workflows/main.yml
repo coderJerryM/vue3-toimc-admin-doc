@@ -9,29 +9,38 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
         with:
-          node-version: "14.x"
+          version: 6.32.6
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+          cache: "pnpm"
 
       # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)
-      - name: Cache node modules
-        uses: actions/cache@v1
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Get npm cache directory
+      #   id: npm-cache-dir
+      #   run: |
+      #     echo "::set-output name=dir::$(pnpm config get cache)"
+
+      # - uses: actions/cache@v3
+      #   id: pnpm-cache
+      #   # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+      #   with:
+      #     path: ${{ steps.npm-cache-dir.outputs.dir }}
+      #     key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pnpm-
+
       - name: Install Dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm i
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm i
 
       # Vuepress Build.
       - name: Generates Pages
         run: |
-          npm run build
+          pnpm build
 
       - name: Deploy Github Pages🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0

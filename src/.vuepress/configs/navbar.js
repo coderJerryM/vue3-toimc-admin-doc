@@ -8,8 +8,8 @@ const navbar = [
       {
         text: '文档贡献',
         children: [
-          '/about/contribute/docs/index.md',
-          '/about/contribute/docs/01 规范.md'
+          '/about/contribute/docs/guide.md',
+          '/about/contribute/docs/standard.md'
         ]
       },
       { text: '贡献代码', children: ['/about/contribute/code/index.md'] }

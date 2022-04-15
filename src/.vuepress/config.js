@@ -8,7 +8,7 @@ const configs = {
   title: 'vue-toimc-admin',
   description:
     'vue-toimc-admin 目标是为中大型项目开发，提供现成的开箱解决方案及丰富的示例',
-  base: '/vue-toimc-admin-doc/',
+  base: '/vue3-toimc-admin-doc/',
   dest: `${process.cwd()}/dist`, // 输出目录
 
   head: [
