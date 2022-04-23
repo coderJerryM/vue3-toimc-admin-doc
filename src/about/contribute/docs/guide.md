@@ -9,7 +9,7 @@ sidebar: false
 
 ## 必备的知识
 
-- 必须要会使用MarkDown语法，并遵循 [编写规范](./01 规范)
+- 必须要会使用MarkDown语法，并遵循 [编写规范](./standard)
 
 - 学习vuepress的使用，参考[文档](https://v2.vuepress.vuejs.org/zh/)
 
@@ -63,7 +63,7 @@ sidebar: false
 
 - 所有与hooks相关的文档都卸载`/src/hooks/`目录中
 
-- 按照 [编写规范](./01规范)书写，一定注意不要有4级标题；
+- 按照 [编写规范](./standard)书写，一定注意不要有4级标题；
 
 - 每完成一个部分进行一次commit；
 
