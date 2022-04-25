@@ -9,7 +9,7 @@ actions:
     link: https://github.com/toimc-team/vue3-toimc-admin-doc
     type: secondary
 features:
-  - title: 💡 最新技术栈
+  - title: 💡 最新技术栈~
     details: 基于Vue3、Vite、TypeScript等最新技术栈开发
   - title: ⚡️ 轻量快速的热重载
     details: 无论应用程序大小如何，都始终极快的模块热重载（HMR）
