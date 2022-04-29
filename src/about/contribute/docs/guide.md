@@ -29,10 +29,12 @@ sidebar: false
   ```shell
   $ git clone https://github.com/toimc-team/vue3-toimc-admin-doc.git
   ```
+  
 - 本地安装
   ```shell
   $ pnpm install
   ```
+  
 - 使用终端进入项目目录并使用`pnpm run dev`运行项目，在浏览器中访问：`http://localhost:8080/vue-toimc-admin/`；
 
 - 明确自己更新的文章或者内容的范畴。
@@ -49,19 +51,43 @@ sidebar: false
   :::
 
   系列文章的目录需要按照如下要求进行命名：
-  
+
   
 
   说明：
 
-  - 保证文章列表的顺序：文章以`0`或者不加`0`，从1开始，子篇章使用`.`进行扩展
   - 文章内，不要设置`sidebar: auto`
-  - 文章内的一级标题与文件名同名，并去除标号，如：`BasicForm.md`的一级标题应该是`BasicForm`
-  - 所有.md的文件的图片，存放在相对目录的`assets`目录中
 
-- 所有与组件相关的文档都写在`/src/components/`目录中
+  - 文章内的一级标题与文件名同名，并去除标号，如：在组件中添加一个 form 的文档，首先在 `src/components/` 新建 `form.md` 文件，然后一级标题应该是 **表单**
 
-- 所有与hooks相关的文档都卸载`/src/hooks/`目录中
+    ![image-20220429214103681](assets/image-20220429214103681.png)
+
+  - 所有.md的文件的图片，存放在相对目录的`assets`目录中;
+
+- 所有与组件相关的文档都写在 `/src/components/ `目录中，路由就应该在 `src/.vuepress/configs/sidebar.js` 文件的 `/components/` 配置项中  添加[查看示例](https://github.com/toimc-team/vue3-toimc-admin-doc/blob/main/src/.vuepress/configs/sidebar.js)
+
+- 所有与hooks相关的文档都写在 `/src/hooks/` 目录中，路由就应该在 `src/.vuepress/configs/sidebar.js` 文件的 `/tools/` 配置项中添加  [查看示例](https://github.com/toimc-team/vue3-toimc-admin-doc/blob/main/src/.vuepress/configs/sidebar.js)
+
+- 所有与views相关的文档都写在 `/src/views/`目录中，**路由就应该在 `src/.vuepress/configs/sidebar.js` 文件的 `/views/` 配置项中添加**
+
+- 如果要添加某个系列的文档说明，就不应该是简单的 `{text: 'xx', '/xxx'}`，而应该是`{text: 'xx', children: ['xxx01', 'xxx02',..., 'xxxN']}`
+
+- 文档结构及顺序
+
+  - 简要介绍
+  - 使用方法
+  - 高级使用方法
+  - API 属性的顺序
+    - `Props`
+    - `Events`
+    - `Slots`
+    - Props中对象属性的详细说明
+  - API属性介绍，以表格形式，由以下几部分构成
+    - 属性名
+    - 类型
+    - 默认值
+    - 是否必传
+    - 描述
 
 - 按照 [编写规范](./standard)书写，一定注意不要有4级标题；
 
