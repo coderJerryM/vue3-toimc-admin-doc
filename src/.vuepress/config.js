@@ -91,6 +91,9 @@ const configs = {
   markdown: {
     code: {
       lineNumbers: false // 不显示行号
+    },
+    extendMarkdown: md => {
+      md.use(require('markdown-it-disable-url-encode'))
     }
   },
 

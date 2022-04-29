@@ -26,6 +26,7 @@ specifiers:
   eslint-plugin-import: ^2.26.0
   eslint-plugin-node: ^11.1.0
   eslint-plugin-prettier: ^4.0.0
+  markdown-it-disable-url-encode: ^1.0.1
   prettier: ^2.6.2
   vite-plugin-imagemin: ^0.6.1
   vuepress: ^2.0.0-beta.39
@@ -53,6 +54,7 @@ devDependencies:
   eslint-plugin-import: 2.26.0_eslint@8.13.0
   eslint-plugin-node: 11.1.0_eslint@8.13.0
   eslint-plugin-prettier: 4.0.0_1815ac95b7fb26c13c7d48a8eef62d0f
+  markdown-it-disable-url-encode: 1.0.1
   prettier: 2.6.2
   vite-plugin-imagemin: 0.6.1
   vuepress: 2.0.0-beta.39
@@ -4877,6 +4879,12 @@ packages:
 
   /markdown-it-container/3.0.0:
     resolution: {integrity: sha512-y6oKTq4BB9OQuY/KLfk/O3ysFhB3IMYoIWhGJEidXt1NQFocFK2sA2t0NYZAMyMShAGL6x5OPIbrmXPIqaN9rw==}
+    dev: true
+
+  /markdown-it-disable-url-encode/1.0.1:
+    resolution: {integrity: sha512-M/0GhhOzQcS8d2aFXF5SBSPjEmvfovkCgmVgZUm2B9nStEAVCb8bCfYVPaHNfem6M0TrBcdruF/PH1hKxwPIUw==}
+    peerDependencies:
+      mdurl: '*'
     dev: true
 
   /markdown-it-emoji/2.0.0:
