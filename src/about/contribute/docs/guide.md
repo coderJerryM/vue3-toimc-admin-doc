@@ -68,7 +68,7 @@ sidebar: false
 
 - 所有与hooks相关的文档都写在 `/src/hooks/` 目录中，路由就应该在 `src/.vuepress/configs/sidebar.js` 文件的 `/tools/` 配置项中添加  [查看示例](https://github.com/toimc-team/vue3-toimc-admin-doc/blob/main/src/.vuepress/configs/sidebar.js)
 
-- 所有与views相关的文档都写在 `/src/views/`目录中，**路由就应该在 `src/.vuepress/configs/sidebar.js` 文件的 `/views/` 配置项中添加**
+- 所有与views相关的文档都写在 `/src/views/`目录中，路由就应该在 `src/.vuepress/configs/sidebar.js` 文件的 `/views/` 配置项中添加 [查看示例](https://github.com/toimc-team/vue3-toimc-admin-doc/blob/main/src/.vuepress/configs/sidebar.js)
 
 - 如果要添加某个系列的文档说明，就不应该是简单的 `{text: 'xx', '/xxx'}`，而应该是`{text: 'xx', children: ['xxx01', 'xxx02',..., 'xxxN']}`
 
