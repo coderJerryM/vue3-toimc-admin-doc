@@ -1,5 +1,10 @@
 const navbar = [
   { text: '指南', link: '/guide/guide/' },
+
+  {
+    text: '菜单配置',
+    link: '/sys/'
+  },
   { text: '组件', link: '/components/' },
   { text: '示例', link: '/views/' },
   { text: '工具集', link: '/tools/' },
