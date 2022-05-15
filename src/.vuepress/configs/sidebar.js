@@ -12,7 +12,14 @@ const sidebar = {
   ],
   '/views/': [{ text: '示例', children: ['/views/'] }],
   '/components/': [
-    { text: '表单', link: '/components/form' },
+    {
+      text: '图标',
+      link: '/components/icon'
+    },
+    {
+      text: '表单',
+      link: '/components/form'
+    },
     { text: '日历', link: '/components/calendar' }
   ],
   '/tools/': [
