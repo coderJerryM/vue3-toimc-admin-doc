@@ -2,7 +2,11 @@ const sidebar = {
   '/guide/': [
     {
       text: '指南',
-      children: ['/guide/guide/', '/guide/guide/get-start']
+      children: [
+        '/guide/guide/',
+        '/guide/guide/get-start',
+        '/guide/guide/project-configs'
+      ]
     },
     {
       text: '深入',
