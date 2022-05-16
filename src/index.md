@@ -4,7 +4,7 @@ home: true
 
 actions:
   - text: 快速开始 👉
-    link: /guide/
+    link: /guide/guide
   - text: 在线预览
     link: https://toimc-team.github.io/vue3-toimc-admin/
     type: secondary
