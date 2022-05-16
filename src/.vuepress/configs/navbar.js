@@ -12,14 +12,15 @@ const navbar = [
       {
         text: '文档贡献',
         children: [
-          '/about/contribute/docs/guide.md',
-          '/about/contribute/docs/standard.md',
-          '/about/contribute/code/env.md',
-          '/about/contribute/code/pr.md'
+          '/about/contribute/docs/guide',
+          '/about/contribute/docs/standard',
+          '/about/contribute/code/env',
+          '/about/contribute/code/pr'
         ]
       }
     ]
   },
+  { text: '支持&反馈', link: '/about/contacts' },
   { text: 'Github', link: 'https://github.com/toimc-team/vue3-toimc-admin' }
 ]
 
