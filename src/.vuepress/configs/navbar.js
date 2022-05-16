@@ -4,7 +4,7 @@ const navbar = [
     text: '组件',
     link: '/components/icon'
   },
-  { text: '示例', link: '/views/' },
+  { text: '示例', link: '/views/dashboard/dashboard' },
   { text: '工具集', link: '/tools/' },
   {
     text: '关于',

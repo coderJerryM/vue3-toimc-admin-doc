@@ -23,7 +23,6 @@ const sidebar = {
     { text: '其他', link: '/guide/other/' }
   ],
 
-  '/views/': [{ text: '示例', children: ['/views/'] }],
   '/components/': [
     {
       text: '基础组件',
@@ -103,7 +102,7 @@ const sidebar = {
       children: ['/tools/useI18n', '/tools/useLocale', '/tools/useWatermark']
     }
   ],
-  '/about': [
+  '/about/': [
     {
       text: '参与贡献',
       children: [
@@ -114,6 +113,28 @@ const sidebar = {
     {
       text: 'PR教程',
       children: ['/about/contribute/code/env', '/about/contribute/code/pr']
+    }
+  ],
+  '/views/': [
+    {
+      text: '首页',
+      children: ['/views/dashboard/dashboard']
+    },
+    {
+      text: '系统管理',
+      children: [
+        {
+          text: '菜单管理',
+          children: [
+            '/views/system/menu/',
+            '/views/system/menu/01-菜单配置说明.md',
+            '/views/system/menu/02-带参数路由菜单.md',
+            '/views/system/menu/03-路由菜单规则.md',
+            '/views/system/menu/04-聚合路由菜单.md',
+            '/views/system/menu/05-页面按钮权限用法.md'
+          ]
+        }
+      ]
     }
   ]
 }
