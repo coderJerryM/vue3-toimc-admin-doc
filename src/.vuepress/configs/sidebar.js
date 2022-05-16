@@ -84,6 +84,19 @@ const sidebar = {
       text: 'Hooks',
       children: ['/tools/useI18n', '/tools/useLocale', '/tools/useWatermark']
     }
+  ],
+  '/about': [
+    {
+      text: '参与贡献',
+      children: [
+        '/about/contribute/docs/guide',
+        '/about/contribute/docs/standard'
+      ]
+    },
+    {
+      text: 'PR教程',
+      children: ['/about/contribute/code/env', '/about/contribute/code/pr']
+    }
   ]
 }
 
