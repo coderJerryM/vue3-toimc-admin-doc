@@ -3,10 +3,10 @@ home: true
 
 
 actions:
-  - text: Get Started 👉
+  - text: 快速开始 👉
     link: /guide/
-  - text: preview
-    link: https://github.com/toimc-team/vue3-toimc-admin-doc
+  - text: 在线预览
+    link: https://toimc-team.github.io/vue3-toimc-admin-doc/
     type: secondary
 features:
   - title: 💡 最新技术栈~

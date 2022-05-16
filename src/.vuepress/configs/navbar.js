@@ -1,11 +1,19 @@
 const navbar = [
   { text: '指南', link: '/guide/guide/' },
-
   {
-    text: '菜单配置',
-    link: '/sys/'
+    text: '组件',
+    link: '/components/',
+    children: [
+      {
+        text: '图标',
+        link: '/components/icon'
+      },
+      {
+        text: '表单',
+        link: '/components/form'
+      }
+    ]
   },
-  { text: '组件', link: '/components/' },
   { text: '示例', link: '/views/' },
   { text: '工具集', link: '/tools/' },
   {
@@ -21,7 +29,6 @@ const navbar = [
       { text: '贡献代码', children: ['/about/contribute/code/index.md'] }
     ]
   },
-  { text: '在线预览', link: 'https://github.com/toimc-team/vue3-toimc-admin' },
   { text: 'Github', link: 'https://github.com/toimc-team/vue3-toimc-admin' }
 ]
 
