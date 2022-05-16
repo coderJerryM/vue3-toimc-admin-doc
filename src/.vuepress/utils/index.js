@@ -16,7 +16,7 @@ exports.genSliderBarConfig = (dir, { hasSub, exclude }, isRoot, root) => {
   const subDir = hasSub ? after : ''
   const arr = []
   files.forEach(item => {
-    console.log('item:', item)
+    // console.log('item:', item)
     if (exclude.indexOf(item) !== -1) return
     // 提取出用  '.md' 隔开的path的最后一部分
     item = subDir
@@ -25,7 +25,7 @@ exports.genSliderBarConfig = (dir, { hasSub, exclude }, isRoot, root) => {
 
     // 添加 '.md' 后缀
     item = item + '.md'
-    console.log('item2===>:', item)
+    // console.log('item2===>:', item)
     if (isRoot) item = root + item
     arr.push(item)
   })

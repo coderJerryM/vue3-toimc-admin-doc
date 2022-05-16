@@ -11,15 +11,6 @@ const sliderBarOptions = {
 }
 const sidebar = {
   collapsable: false,
-  '/sys/': [
-    {
-      text: '菜单配置',
-      children: genSliderBarConfig('sys', {
-        ...sliderBarOptions,
-        hasSub: false
-      })
-    }
-  ],
   '/guide/': [
     {
       text: '指南',
@@ -44,7 +35,12 @@ const sidebar = {
     },
     {
       text: '菜单',
-      link: '/components/menu'
+      children: genSliderBarConfig(
+        'components/menu',
+        sliderBarOptions,
+        true,
+        '/components/'
+      )
     },
     {
       text: '动态展示',
