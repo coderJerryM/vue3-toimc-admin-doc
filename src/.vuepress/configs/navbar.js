@@ -2,17 +2,7 @@ const navbar = [
   { text: '指南', link: '/guide/guide/' },
   {
     text: '组件',
-    link: '/components/',
-    children: [
-      {
-        text: '图标',
-        link: '/components/icon'
-      },
-      {
-        text: '表单',
-        link: '/components/form'
-      }
-    ]
+    link: '/components/icon'
   },
   { text: '示例', link: '/views/' },
   { text: '工具集', link: '/tools/' },

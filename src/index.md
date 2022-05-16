@@ -6,7 +6,7 @@ actions:
   - text: 快速开始 👉
     link: /guide/
   - text: 在线预览
-    link: https://toimc-team.github.io/vue3-toimc-admin-doc/
+    link: https://toimc-team.github.io/vue3-toimc-admin/
     type: secondary
 features:
   - title: 💡 最新技术栈~
