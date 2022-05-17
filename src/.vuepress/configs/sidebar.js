@@ -6,7 +6,8 @@ const sidebar = {
       children: [
         '/guide/guide/',
         '/guide/guide/get-start',
-        '/guide/guide/project-configs'
+        '/guide/guide/project-configs',
+        '/guide/guide/router'
       ]
     },
     {
