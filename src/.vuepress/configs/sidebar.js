@@ -1,14 +1,3 @@
-/**
- * dir, 项目路径
- * ops:参数
- * isRoot 是否根路径
- * root 根路径
- */
-const { genSliderBarConfig } = require('../utils/index')
-const sliderBarOptions = {
-  hasSub: true,
-  exclude: ['README.md', 'assets', '.DS_Store', 'docs', 'images']
-}
 const sidebar = {
   collapsable: false,
   '/guide/': [
@@ -38,12 +27,7 @@ const sidebar = {
     },
     {
       text: '菜单',
-      children: genSliderBarConfig(
-        'components/menu',
-        sliderBarOptions,
-        true,
-        '/components/'
-      )
+      children: ['/components/menu/dropdown']
     },
     {
       text: '动态展示',
