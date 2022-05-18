@@ -186,9 +186,15 @@ interface RouteMeta extends Record<string | number | symbol, unknown> {
 
 ## 新增路由
 
-### 如何新增一个路由模块
+### 新增路由
 
-在 `src/router/modules` 内新增一个模块文件。
+在 `src/router/modules` 内新增一个模块文件`test.ts`（建议：按照功能命名）。
+
+::: tip
+
+此时路由已添加完成，不需要手动引入，放在 `src/router/modules` 内的文件会自动被加载。
+
+:::
 
 ```ts
 import { t } from '@/hooks/useI18n'
@@ -225,4 +231,19 @@ export default testRoutes
 
 ```
 
-> 此时路由已添加完成，不需要手动引入，放在 `src/router/modules` 内的文件会自动被加载。
+
+
+### 标题国际化
+
+为了配合vscode的[i18n插件](https://marketplace.visualstudio.com/items?itemName=Lokalise.i18n-ally)，添加了一个“无意义”的方法：
+
+```ts
+import { t } from '@/hooks/useI18n'
+
+// 文件内容
+export const t = (key: string) => key
+```
+
+效果：
+
+![image-20220518225700168](./assets/image-20220518225700168.png)
