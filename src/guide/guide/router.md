@@ -183,3 +183,46 @@ interface RouteMeta extends Record<string | number | symbol, unknown> {
   }
 }
 ```
+
+## 新增路由
+
+### 如何新增一个路由模块
+
+在 `src/router/modules` 内新增一个模块文件。
+
+```ts
+import { t } from '@/hooks/useI18n'
+import LayoutsDefault from '@/layouts/default.vue'
+import type { AppRouteRecordRaw } from '../types'
+
+const testRoutes: Array<AppRouteRecordRaw> = [
+  {
+    name: 'Test',
+    meta: {
+      title: 'Test',
+      order: 100000,
+      icon: 'Histogram',
+      hideChildrenInMenu: true,
+      alone: true
+    },
+    path: '/test',
+    component: LayoutsDefault,
+    redirect: '/test/index',
+    children: [
+      {
+        name: 'TestPage',
+        path: 'index',
+        meta: {
+          title: 'test page'
+        },
+        component: () => import('@/views/test/index.vue')
+      }
+    ]
+  }
+]
+
+export default testRoutes
+
+```
+
+> 此时路由已添加完成，不需要手动引入，放在 `src/router/modules` 内的文件会自动被加载。
