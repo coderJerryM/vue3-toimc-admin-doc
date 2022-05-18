@@ -87,7 +87,12 @@ const sidebar = {
   '/tools/': [
     {
       text: 'Hooks',
-      children: ['/tools/useI18n', '/tools/useLocale', '/tools/useWatermark']
+      children: [
+        '/tools/useI18n',
+        '/tools/useLocale',
+        '/tools/useWatermark',
+        '/tools/debounce'
+      ]
     }
   ],
   '/about/': [
