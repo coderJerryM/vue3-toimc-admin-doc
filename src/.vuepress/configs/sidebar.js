@@ -8,6 +8,7 @@ const sidebar = {
         '/guide/guide/get-start',
         '/guide/guide/project-configs',
         '/guide/guide/router',
+        '/guide/guide/outside-module',
         '/guide/guide/deploy'
       ]
     },
