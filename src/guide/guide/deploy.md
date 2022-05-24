@@ -18,22 +18,11 @@ pnpm build
 
 构建打包成功之后，会在根目录生成 `dist` 文件夹，里面就是构建打包好的文件。
 
-### 兼容旧版浏览器
-
-在 `.env.production` 内
-
-设置 `VITE_LEGACY=true` 即可打包出兼容旧版浏览器的代码
-
-```ts
-# Is it compatible with older browsers
-VITE_LEGACY = true
-```
-
 ### 预览
 
 发布之前可以在本地进行预览，有多种方式，这里介绍两种。
 
-**不能**直接打开构建后的 **html** 文件。
+**不能**直接打开构建后的 **html** 文件
 
 - 使用项目自定义命令进行预览（推荐）
 
@@ -83,6 +72,18 @@ live-server
 live-server --port=9000
 ```
 
+### 兼容旧版浏览器
+
+在 `.env.production` 内
+
+设置 `VITE_LEGACY=true` 即可打包出兼容旧版浏览器的代码
+
+```ts
+# Is it compatible with older browsers
+VITE_LEGACY = true
+```
+
+
 ### 分析构建文件体积
 
 如果你的构建文件很大，进行通过运行 `yarn report` 命令，进行代码**体积分析**，从而优化你的代码。
@@ -94,6 +95,8 @@ live-server --port=9000
 :::
 
 ![build-analyse](./assets/build-analyse.png)
+
+
 
 ## 压缩
 
@@ -108,6 +111,8 @@ live-server --port=9000
 VITE_BUILD_COMPRESS = 'gzip'
 ```
 
+
+
 ### 开启 brotli 压缩
 
 `brotli` 是比 `gzip` 压缩率更高的算法，可以与 `gzip` 共存**不会冲突**，需要 `nginx` 安装指定模块并开启即可。
@@ -119,6 +124,8 @@ VITE_BUILD_COMPRESS = 'gzip'
 VITE_BUILD_COMPRESS = 'brotli'
 ```
 
+
+
 ### 同时开启 gzip 与 brotli
 
 二者同时开启，即可在打包的同时生成 `.gz` 和 `.br` 文件。
@@ -129,6 +136,8 @@ VITE_BUILD_COMPRESS = 'brotli'
 # If you need multiple forms, you can use `,` to separate
 VITE_BUILD_COMPRESS = 'brotli,gzip'
 ```
+
+
 
 ### gzip 与 brotli 在 nginx 内的配置
 
@@ -160,6 +169,7 @@ http {
   brotli_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript image/svg+xml;
 }
 ```
+
 
 
 ## 部署
@@ -207,6 +217,16 @@ const router = createRouter({
 
 ### `history` 路由模式下服务端配置
 
+修改`.env`文件，来修改路由默认的模式：
+
+```
+# 根据自己应用场景来配置
+# Optional: hash | html5
+VITE_APP_ROUTE_MODE = "hash"
+```
+
+
+
 开启 `history` 模式需要服务器配置，否则刷新会报**404**。
 
 这里以 `nginx` 配置为例
@@ -230,5 +250,4 @@ location / {
   try_files $uri $uri/ /index.html;
 }
 ```
-
 
