@@ -1,5 +1,11 @@
 # 开始
 
+## 前言
+
+项目使用element-plus为基础组件库，同时，兼容了原组件的全部属性与方法，使用自动导入组件依赖，方便后续项目打包减少项目体积，放心食用。
+
+
+
 ## 环境准备
 
 本地环境需要安装 [pnpm](https://pnpm.io/)、[Node.js](http://nodejs.org/) 和 [Git](https://git-scm.com/)
@@ -8,6 +14,8 @@
 
 - 使用[pnpm](https://pnpm.io/)，否则依赖可能安装不上。
 - [Node.js](http://nodejs.org/) 版本推荐 `14.x` 及以上。
+
+
 
 ## 工具配置
 
@@ -21,6 +29,8 @@
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - 代码格式化
 - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint) - css 格式化
 - [DotENV](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv) - .env 文件 高亮
+
+
 
 ## 代码获取
 
@@ -45,11 +55,13 @@ $ git clone https://github.com/toimc-team/vue3-toimc-admin.git
 $ git clone https://gitee.com/toimc-team/vue3-toimc-admin
 ```
 
+
+
 ## 安装
 
 ### 安装 Node.js
 
-如果您电脑未安装[Node.js](https://nodejs.org/en/)，请安装它。
+如果您电脑未安装[Node.js](https://nodejs.org/en/)，请安装它，Node的版本最少是：14.19.x（如果使用pnpm的话）。
 
 **验证**
 
@@ -62,11 +74,27 @@ $ npm -v
 
 如果你需要同时存在多个 node 版本，可以使用 [Nvm](https://github.com/nvm-sh/nvm) 或者其他工具进行 Node.js 进行版本管理。
 
+
+
 ### 安装依赖
+
+#### 使用淘宝源
+
+- 使用nrm来切换（推荐）：`npm i -g nrm --registry=https://registry.npmmirror.com `，然后再使用`nrm use taobao`
+- 直接使用npm config来设置：`npm config set registry https://registry.npmmirror.com`
+- 使用cnpm来安装：`npm i -g cnpm --registry=https://registry.npmmirror.com`
+
+
 
 #### Pnpm安装
 
-必须使用 [pnpm](https://pnpm.io/installation)进行依赖安装（若其他包管理器安装不了需要自行处理）。
+::: tip
+
+如果安装失败了，可以考虑看看下面的`常见安装问题`，考虑使用 代理 进行安装，最后，可以来我们的官方交流群进行反馈。
+
+:::
+
+建议使用 [pnpm](https://pnpm.io/installation)进行依赖安装（若其他包管理器安装不了需要自行处理）。
 
 如果未安装`pnpm`，可以用下面命令来进行全局安装
 
@@ -84,6 +112,47 @@ $ pnpm -v
 ```shell
 $ pnpm install
 ```
+
+
+
+## 常见安装问题
+
+### 安装imagemin失败问题
+
+imagemin官方issues：https://github.com/imagemin/imagemin/issues/168
+
+解决方案：
+
+- 使用淘宝加速源
+- 安装对应平台的依赖
+
+```
+#macos平台
+brew install automake autoconf libtool dpkg pkgconfig nasm libpng
+
+# Linux - Centos
+yum install wget autoconf automake gcc nasm libtool
+
+# Linux - Ubuntu
+apt-get install -y --no-install-recommends autoconf  libtool  libpng-dev  pkg-config nasm
+```
+
+
+
+### homebrew（macos）
+
+Homebrew国内开源安装脚本库：
+
+- [https://gitee.com/cunkai/HomebrewCN](https://gitee.com/cunkai/HomebrewCN)
+- [https://gitee.com/huwei1024/HomebrewCN](https://gitee.com/huwei1024/HomebrewCN)
+
+
+
+手动安装：
+
+清华源https://mirrors.tuna.tsinghua.edu.cn/help/homebrew/，推荐intel芯片的小伙伴，自己动手，如果是M1版本的小伙伴，直接用上面的脚本库。
+
+
 
 ## npm script
 
@@ -114,106 +183,157 @@ $ pnpm install
     "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
     // 执行 stylelint 格式化
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    // 测试相关
+    "test": "vitest",
+    "test:dev": "vitest dev",
+    "test:watch": "vitest -w",
+    "coverage": "vitest run --coverage"
   },
   // ...
 }
 ```
 
+
+
 ## 目录说明
 
-```
+```bash
 .
-├── build
-├── mock
-├── public
-├── src
-│   ├── assets
-│   │   ├── svg
-│   │   ├── images
-│   │   └── style
-│   ├── components
-│   │   ├── ChooseCity
-│   │   ├── CollapseContainer
-│   │   ├── DProgress
-│   │   ├── List
-│   │   ├── Trend
-│   │   ├── index.ts
-│   │   ├── Icon
-│   │   ├── Card
-│   │   ├── ChooseArea
-│   │   ├── Cropper
-│   │   ├── DNumbers
-│   │   ├── Descriptions
-│   │   ├── Form
-│   │   ├── Input
-│   │   ├── Menu
-│   │   ├── NoticePad
-│   │   ├── QrCode
-│   │   ├── Table
-│   │   ├── Transition
-│   │   └── Header
-│   ├── layouts
-│   ├── plugins
-│   ├── router
-│   │   └── modules
-│   ├── settings
-│   ├── store
-│   │   └── modules
-│   ├── utils
-│   ├── main.ts
-│   ├── views
-│   │   ├── about
-│   │   ├── dashboard
-│   │   ├── menus
-│   │   ├── charts
-│   │   ├── pages
-│   │   │   ├── form
-│   │   │   ├── errors
-│   │   │   └── login
-│   │   ├── system
-│   │   ├── components
-│   │   │   ├── area
-│   │   │   ├── city
-│   │   │   ├── notice-message
-│   │   │   ├── progress
-│   │   │   ├── trends
-│   │   │   ├── icon
-│   │   │   ├── cropper
-│   │   │   ├── display
-│   │   │   ├── numbers
-│   │   │   ├── share
-│   │   │   ├── table
-│   │   │   ├── transitions
-│   │   │   └── forms
-│   │   └── iframe
-│   ├── App.vue
-│   └── env.d.ts
-├── types
-├── .editorconfig
-├── .env
-├── .env.development
-├── .env.production
-├── .eslintignore
-├── .eslintrc.js
-├── .gitignore
-├── .prettierignore
-├── .prettierrc.js
-├── .stylelintignore
-├── auto-imports.d.ts
+├── auto-imports.d.ts         # 自动组件
+├── build                     # 构建脚本相关
 ├── commitlint.config.js
 ├── components.d.ts
 ├── index.html
 ├── jsconfig.json
-├── LICENSE
-├── README.md
+├── mock                      # mock文件
 ├── package.json
-├── pnpm-lock.yaml
+├── pnpm-lock.yaml            # 推荐使用pnpm 管理项目依赖
 ├── postcss.config.js
+├── public                    # 公共资源目录
+│   ├── favicon.ico
+│   └── resource
+│       └── img
+├── src
+│   ├── App.vue               # Vue入口
+│   ├── api                   # api目录
+│   │   ├── page
+│   │   └── sys
+│   ├── assets                # 静态资源目录
+│   │   ├── images
+│   │   ├── logo.png
+│   │   ├── style
+│   │   └── svg
+│   ├── components            # 基础组件
+│   │   ├── Calendar          # 日历组件
+│   │   ├── Card              # 卡片组件
+│   │   ├── ChooseArea        # 区域选择组件
+│   │   ├── ChooseCity        # 城市选择组件
+│   │   ├── CollapseContainer # 折叠容器组件
+│   │   ├── CountDown         # 倒计时组件
+│   │   ├── Cropper           # 剪切组件
+│   │   ├── DEcharts          # 动态图表
+│   │   ├── DNumbers          # 动态数字
+│   │   ├── DProgress         # 动态进度条
+│   │   ├── DSlider           # 动态滑块
+│   │   ├── Descriptions      # 描述组件
+│   │   ├── DropDown          # 下拉菜单
+│   │   ├── Editor            # 常见的MD + 所见即所得编辑器
+│   │   ├── Form              # 表格
+│   │   ├── Icon              # 图标组件
+│   │   ├── Input             # 输入组件封装
+│   │   ├── List              # 列表组件
+│   │   ├── Menu              # 菜单组件
+│   │   ├── NoticePad         # 弹出菜单
+│   │   ├── QrCode            # 二维码
+│   │   ├── SplitPanel        # 分割面板
+│   │   ├── StrengthMeter     # 密码强度指示器
+│   │   ├── Table             # 表格
+│   │   ├── ThemeSetting      # 主题设置
+│   │   ├── Transition        # 过渡效果
+│   │   ├── Trend             # 趋势组件
+│   │   ├── Verify            # 密码验证组件
+│   │   ├── Waterfall         # 瀑布流
+│   │   ├── Weather           # 天气组件
+│   │   └── index.ts
+│   ├── config
+│   │   ├── index.ts
+│   │   └── theme.config.ts
+│   ├── directive
+│   │   ├── index.ts
+│   │   └── modules
+│   ├── enums
+│   │   └── cacheEnum.ts
+│   ├── env.d.ts
+│   ├── hooks                 # 工具集
+│   │   ├── useEventListener.ts
+│   │   ├── useGlobSetting.ts
+│   │   ├── useI18n.ts
+│   │   ├── useLocale.ts
+│   │   ├── useRequest
+│   │   ├── useScript.ts
+│   │   └── useWatermark.ts
+│   ├── layouts               # 布局
+│   │   ├── blank.vue
+│   │   ├── default.vue
+│   │   ├── header
+│   │   ├── sider
+│   │   └── tabs
+│   ├── locales               # 国际化
+│   │   ├── en.json
+│   │   ├── setupI18n.ts
+│   │   └── zh-CN.json
+│   ├── main.ts               # 核心入口ts
+│   ├── plugins
+│   │   ├── element-icons.ts
+│   │   └── index.ts
+│   ├── router
+│   │   ├── index.ts          # 路由入口
+│   │   ├── modules           # 路由模板，按照功能划分
+│   │   └── types.d.ts
+│   ├── settings
+│   │   ├── encryptionSetting.ts
+│   │   ├── localeSetting.ts
+│   │   └── siteSetting.ts
+│   ├── store
+│   │   ├── index.ts
+│   │   └── modules
+│   ├── utils
+│   │   ├── cache
+│   │   ├── calendar.ts
+│   │   ├── cipher.ts
+│   │   ├── domUtils.ts
+│   │   ├── env.ts
+│   │   ├── event.ts
+│   │   ├── file
+│   │   ├── index.ts
+│   │   ├── is.ts
+│   │   ├── log.ts
+│   │   ├── request.ts
+│   │   ├── sendCode.ts
+│   │   ├── theme
+│   │   └── tsxHelper.tsx
+│   └── views                 # 示例页面分类
+│       ├── about
+│       ├── charts
+│       ├── components
+│       ├── dashboard
+│       ├── excel
+│       ├── guide
+│       ├── iframe
+│       ├── menus
+│       ├── pages
+│       └── system
 ├── stylelint.config.js
-├── vite.config.ts
-├── windi.config.ts
-├── tsconfig.json
+├── tsconfig.json             # TypeScript配置文件
 ├── tsconfig.node.json
-└── components.d.ts
+├── types                     # TypeScript类型文件
+│   ├── config.d.ts
+│   ├── global.d.ts
+│   ├── index.d.ts
+│   ├── store.d.ts
+│   └── vue-router.d.ts
+├── vite.config.ts            # vite构建配置
+├── vitest.config.ts          # vitest配置
+└── windi.config.ts           # windicss配置
 ```
