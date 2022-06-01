@@ -16,7 +16,10 @@ const sidebar = {
       text: '深入',
       children: ['/guide/advanced/i18n', '/guide/advanced/theme']
     },
-    { text: '其他', link: '/guide/other/' }
+    {
+      text: '其他',
+      children: ['/guide/other/questions']
+    }
   ],
 
   '/components/': [
