@@ -44,7 +44,7 @@
 }
 ```
 
-1. 使用 npm,在电脑 host 文件加上如下配置即可
+2. 使用 npm,在电脑 host 文件加上如下配置即可
 
 ```sh
 199.232.4.133 raw.githubusercontent.com
