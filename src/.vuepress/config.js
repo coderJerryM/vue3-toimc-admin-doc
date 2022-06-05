@@ -110,6 +110,12 @@ const configs = {
     tip: '提示',
     warning: '注意',
     danger: '警告',
+    // 底部修改建议配置
+    docsRepo: 'https://github.com/toimc-team/vue3-toimc-admin-doc',
+    docsBranch: 'main',
+    docsDir: 'src',
+    editLinkText: '为此页提供修改建议',
+    editLinkPattern: ':repo/tree/:branch/:path',
 
     // 404 page
     notFound: [
@@ -123,8 +129,7 @@ const configs = {
     // a11y
     openInNewWindow: '在新窗口打开',
     toggleDarkMode: '切换模式',
-    toggleSidebar: '切换侧边栏',
-    docsDir: 'src'
+    toggleSidebar: '切换侧边栏'
   }
 }
 

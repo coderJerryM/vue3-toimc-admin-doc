@@ -33,7 +33,7 @@ const sidebar = {
     },
     {
       text: '菜单',
-      children: ['/components/menu/dropdown']
+      children: ['/components/dropdown/dropdown']
     },
     {
       text: '动态展示',
@@ -97,7 +97,19 @@ const sidebar = {
         '/tools/useI18n',
         '/tools/useLocale',
         '/tools/useWatermark',
-        '/tools/debounce'
+        '/tools/useDebounce'
+      ]
+    },
+    {
+      text: 'Directive',
+      children: [
+        '/tools/copy',
+        '/tools/debounce',
+        '/tools/throttle',
+        '/tools/draggable',
+        '/tools/longPress',
+        '/tools/waterMarker',
+        '/tools/precode'
       ]
     }
   ],
