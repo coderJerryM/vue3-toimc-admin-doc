@@ -72,6 +72,8 @@ live-server
 live-server --port=9000
 ```
 
+
+
 ### 兼容旧版浏览器
 
 在 `.env.production` 内
@@ -82,6 +84,7 @@ live-server --port=9000
 # Is it compatible with older browsers
 VITE_LEGACY = true
 ```
+
 
 
 ### 分析构建文件体积
@@ -174,6 +177,8 @@ http {
 
 ## 部署
 
+### 通过nginx简单发布
+
 简单的部署只需要将最终生成的**静态文件**，`dist` 文件夹的静态文件发布到你的服务器即可，需要注意的是其中的 `index.html` 通常会是你后台服务的入口页面，这里需要格外注意静态文件 `js` 和 `css` 的**路径**。
 
 例如使用 `nginx` 部署，将文件上传至 `/usr/share/nginx/html` .
@@ -194,6 +199,8 @@ location / {
 # public path
 VITE_PUBLIC_PATH=/
 ```
+
+
 
 ### 前端路由与服务端的结合
 
@@ -251,3 +258,65 @@ location / {
 }
 ```
 
+
+
+## 常见问题
+
+### 使用nginx处理跨域
+
+使用 nginx 处理项目部署后的跨域问题
+
+- 配置前端项目接口地址
+
+```
+# 在.env.production内，配置接口地址
+VITE_GLOB_API_URL=/api
+```
+
+- 在 nginx 配置请求转发到后台
+
+```
+server {
+  listen       8080;
+  server_name  www.yourdomain.com;
+  
+  # 接口代理，用于解决跨域问题
+  location /api {
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+
+		# 后台接口地址，可以是域名，也可以是IP
+    proxy_pass http://yourhost.com.or.ip/api;
+    proxy_redirect default;
+    
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Headers X-Requested-With;
+    add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+  }
+}
+```
+
+
+
+### 减少项目体积
+
+思路通过CND加速：
+
+- 使用CDN加速之后，在`index.html`中进行配置；
+
+- 使用vite打包时，可以添加`optimizeDeps.exclude`属性，来忽略部分包的引入；
+
+  ```tsx
+  export default defineConfig({
+    // ...
+    optimizeDeps: {
+      exclude: [      
+      	"react",
+        "react-dom"
+      ]
+    }
+  })
+  ```
+
+  
