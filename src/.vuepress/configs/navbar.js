@@ -5,7 +5,7 @@ const navbar = [
     link: '/components/icon'
   },
   { text: '示例', link: '/views/dashboard/dashboard' },
-  { text: '工具集', link: '/tools/' },
+  { text: '工具集', link: '/tools/useI18n' },
   {
     text: '关于',
     children: [

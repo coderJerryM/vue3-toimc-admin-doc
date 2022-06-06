@@ -529,6 +529,5 @@ const formBasicSchema: FormSchema[] = [
   })
 </script>
 
-<style scoped lang=""></style>
 ```
 
