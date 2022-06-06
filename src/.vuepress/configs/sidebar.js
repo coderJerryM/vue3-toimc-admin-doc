@@ -61,7 +61,8 @@ const sidebar = {
         '/components/func/download',
         '/components/func/print',
         '/components/func/i18n',
-        '/components/func/waterprint'
+        '/components/func/waterprint',
+        '/components/func/fullscreen'
       ]
     },
     {
