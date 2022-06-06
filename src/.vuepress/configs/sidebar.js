@@ -76,6 +76,7 @@ const sidebar = {
       text: '展示',
       children: [
         '/components/display/desc',
+        '/components/display/header-list',
         '/components/display/card',
         '/components/display/calendar',
         '/components/display/waterfall'
