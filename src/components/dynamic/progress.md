@@ -3,6 +3,7 @@
 二次封装`element-plus`进度条组件，进阶更多功能
 
 
+## 效果
 ![progress](../assets/progress.png)
 
 ## 基础用法

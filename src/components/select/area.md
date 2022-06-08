@@ -4,7 +4,7 @@
 
 - 通过`element-plus`中的`el-select`组件实现省市区三级联动
 
-
+## 效果
 ![choose-area](../assets/choose-area.png)
 
 ## 基本用法

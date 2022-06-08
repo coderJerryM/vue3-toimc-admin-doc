@@ -2,6 +2,7 @@
 
 数字动画组件
 
+## 效果
 ![count-to](../assets/count-to.png)
 
 ## 基础案例用法

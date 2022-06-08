@@ -2,6 +2,8 @@
 
 二次封装`element-plus`的`el-badge`组件，扩展更多用法
 
+## 效果
+
 ![badge](../assets/badge.png)
 
 ## 基础用法

@@ -2,6 +2,8 @@
 
 扩展自定义指令富文本渲染功能
 
+## 效果
+
 ![v-precode](./assets/v-precode.png)
 
 

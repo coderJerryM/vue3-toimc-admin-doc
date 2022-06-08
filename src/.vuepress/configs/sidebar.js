@@ -60,7 +60,6 @@ const sidebar = {
         '/components/func/crop',
         '/components/func/download',
         '/components/func/print',
-        '/components/func/i18n',
         '/components/func/waterprint'
       ]
     },
@@ -79,7 +78,8 @@ const sidebar = {
         '/components/display/header-list',
         '/components/display/card',
         '/components/display/calendar',
-        '/components/display/waterfall'
+        '/components/display/waterfall',
+        '/components/display/split-panel'
       ]
     },
     {

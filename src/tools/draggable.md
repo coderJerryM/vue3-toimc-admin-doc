@@ -2,6 +2,8 @@
 
 扩展自定义指令拖拽功能
 
+## 效果
+
 ![v-draggble](./assets/v-draggable.png)
 
 ## 基础用法

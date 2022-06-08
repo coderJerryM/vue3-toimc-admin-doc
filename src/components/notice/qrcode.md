@@ -1,6 +1,9 @@
 # 二维码
 
+
+## 效果
 ![qrcode](../assets/qecode.png)
+
 ## 基础用法
 
 ```typescript

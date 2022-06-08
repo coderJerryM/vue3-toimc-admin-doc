@@ -6,7 +6,7 @@
 - 汉字转拼音，会有多音字
 - 自动补全与`el-tabs`组合
 
-
+## 效果
 ![choose-city](../assets/choose-city.png)
 
 ## 基本用法
