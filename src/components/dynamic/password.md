@@ -2,6 +2,7 @@
 
 进阶更多密码强度组件用法
 
+## 效果
 ![password](../assets/password.png)
 
 ## 基础用法

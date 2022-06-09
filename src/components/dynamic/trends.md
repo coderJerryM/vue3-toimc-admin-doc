@@ -1,5 +1,7 @@
 # 趋势显示器
 
+
+## 效果
 ![trends](../assets/trends.png)
 
 ## 基础用法

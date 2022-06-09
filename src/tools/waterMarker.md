@@ -2,6 +2,8 @@
 
 扩展自定义指令水印功能
 
+## 效果
+
 ![waterMarker](./assets/v-waterMarker.png)
 
 

@@ -2,6 +2,8 @@
 
 扩展自定义指令节流功能
 
+## 效果
+
 ![v-throttle](./assets/v-throttle.png)
 
 

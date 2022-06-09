@@ -2,6 +2,8 @@
 
 扩展自定义指令长按指令功能
 
+## 效果
+
 ![v-longPress](./assets/v-longPress.png)
 
 

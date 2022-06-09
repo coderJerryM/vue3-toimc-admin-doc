@@ -1,6 +1,8 @@
 # v-copy
 扩展自定义指令复制功能
 
+## 效果
+
 ![v-copy](./assets/v-copy.png)
 
 ## 基础用法
