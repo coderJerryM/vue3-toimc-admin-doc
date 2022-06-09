@@ -13,11 +13,13 @@
     "lint": "prettier --write \"src/**/*.{js,json,vue,html,md}\""
   },
   "devDependencies": {
+    "@algolia/client-search": "^4.9.1",
     "@vuepress/bundler-vite": "^2.0.0-beta.39",
     "@vuepress/plugin-back-to-top": "^2.0.0-beta.38",
     "@vuepress/plugin-container": "^2.0.0-beta.38",
     "@vuepress/plugin-docsearch": "^2.0.0-alpha.1",
     "@vuepress/plugin-external-link-icon": "^2.0.0-beta.38",
+    "@vuepress/plugin-git": "^2.0.0-beta.38",
     "@vuepress/plugin-google-analytics": "^2.0.0-beta.38",
     "@vuepress/plugin-medium-zoom": "^2.0.0-beta.38",
     "@vuepress/plugin-nprogress": "^2.0.0-beta.38",
@@ -35,10 +37,16 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^4.2.1 || ^5.0.0",
     "markdown-it-disable-url-encode": "^1.0.1",
+    "mdurl": "*",
     "prettier": "^2.6.2",
+    "react": ">= 16.8.0 < 18.0.0",
+    "react-dom": ">= 16.8.0 < 18.0.0",
+    "vite": ">=2.0.0",
     "vite-plugin-imagemin": "^0.6.1",
-    "vuepress": "^2.0.0-beta.39"
+    "vuepress": "^2.0.0-beta.39",
+    "webpack": "^5.0.0"
   },
   "resolutions": {
     "bin-wrapper": "npm:bin-wrapper-china"

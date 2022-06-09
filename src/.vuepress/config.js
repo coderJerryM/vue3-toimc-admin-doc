@@ -83,7 +83,8 @@ const configs = {
           // 允许搜索 Frontmatter 中的 `tags`
           getExtraFields: page => page.frontmatter.tags ?? []
         }
-      ]
+      ],
+      '@vuepress/plugin-git'
     ]
   ],
 
