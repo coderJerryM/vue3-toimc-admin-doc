@@ -1,12 +1,20 @@
 # echarts 图表
 
-基于`vue-echarts`的封装。
+基于`vue-echarts`的封装，链接：https://vue-chartjs.org/guide/
+
+自定义组件名称：`v-charts`，原生echarts，可以使用`d-charts`。
+
+
 
 ## 效果
 
 ![vchart](./assets/echarts.png)
 
+
+
 ## 用法
+
+使用基于vue-echarts封装的`v-charts`：
 
 ```vue
 <template>
@@ -180,6 +188,8 @@ export default defineComponent({
 | autoresize  | 指定 ECharts 实例在组件根元素尺寸变化时是否需要自动进行重绘 | `Boolean`                                       | -      | true                                                                                        |
 | loading     | 指定图表的加载状态                                          | `Boolean`                                       | -      | true                                                                                        |
 
+
+
 ## 类型说明
 
 ### ChartsType
@@ -188,28 +198,28 @@ export default defineComponent({
 
 | 可选值               | 描述                                                                      |
 | -------------------- | ------------------------------------------------------------------------- |
-| 'BarChart'           | 柱状图                                                                    |
-| 'BoxplotChart'       | 盒须图                                                                    |
-| 'CandlestickChart'   | K 线图                                                                    |
-| 'CustomChart'        | [自定义系列](https://echarts.apache.org/zh/option.html#series-custom)     |
-| 'EffectScatterChart' | 特效散点图                                                                |
-| 'FunnelChart'        | [漏斗图](https://echarts.apache.org/zh/option.html#series-funnel)         |
-| 'GaugeChart'         | [仪表盘](https://echarts.apache.org/zh/option.html#series-gauge)          |
-| 'GraphChart'         | [关系图](https://echarts.apache.org/zh/option.html#series-graph)          |
-| 'HeatmapChart'       | 热力图                                                                    |
-| 'LineChart'          | 折线图                                                                    |
-| 'LinesChart'         | [折线/面积图](https://echarts.apache.org/zh/option.html#series-line)      |
-| 'MapChart'           | 地图                                                                      |
-| 'ParallelChart'      | [平行坐标系](https://echarts.apache.org/zh/option.html#parallel)          |
-| 'PictorialBarChart'  | [象柱形图](https://echarts.apache.org/zh/option.html#series-pictorialBar) |
-| 'PieChart'           | 饼图                                                                      |
-| 'RadarChart'         | 雷达图                                                                    |
-| 'SankeyChart'        | 桑基图                                                                    |
-| 'ScatterChart'       | 散点图                                                                    |
-| 'SunburstChart'      | 旭日图                                                                    |
-| 'ThemeRiverChart'    | [主题河流图](https://echarts.apache.org/zh/option.html#series-themeRiver) |
-| 'TreeChart'          | [树图](https://echarts.apache.org/zh/option.html#series-tree)             |
-| 'TreemapChart'       | [树映射图](https://echarts.apache.org/zh/option.html#series-treemap)      |
+| BarChart           | 柱状图                                                                    |
+| BoxplotChart       | 盒须图                                                                    |
+| CandlestickChart   | K 线图                                                                    |
+| CustomChart        | [自定义系列](https://echarts.apache.org/zh/option.html#series-custom)     |
+| EffectScatterChart | 特效散点图                                                                |
+| FunnelChart        | [漏斗图](https://echarts.apache.org/zh/option.html#series-funnel)         |
+| GaugeChart         | [仪表盘](https://echarts.apache.org/zh/option.html#series-gauge)          |
+| GraphChart         | [关系图](https://echarts.apache.org/zh/option.html#series-graph)          |
+| HeatmapChart       | 热力图                                                                    |
+| LineChart          | 折线图                                                                    |
+| LinesChart         | [折线/面积图](https://echarts.apache.org/zh/option.html#series-line)      |
+| MapChart           | 地图                                                                      |
+| ParallelChart      | [平行坐标系](https://echarts.apache.org/zh/option.html#parallel)          |
+| PictorialBarChart  | [象柱形图](https://echarts.apache.org/zh/option.html#series-pictorialBar) |
+| PieChart           | 饼图                                                                      |
+| RadarChart         | 雷达图                                                                    |
+| SankeyChart        | 桑基图                                                                    |
+| ScatterChart       | 散点图                                                                    |
+| SunburstChart      | 旭日图                                                                    |
+| ThemeRiverChart    | [主题河流图](https://echarts.apache.org/zh/option.html#series-themeRiver) |
+| TreeChart          | [树图](https://echarts.apache.org/zh/option.html#series-tree)             |
+| TreemapChart       | [树映射图](https://echarts.apache.org/zh/option.html#series-treemap)      |
 
 ### ChartsComponentsType
 
@@ -217,33 +227,97 @@ export default defineComponent({
 
 | 可选值                         | 描述                                                                                  |
 | ------------------------------ | ------------------------------------------------------------------------------------- |
-| 'AriaComponent'                | [无障碍设置](https://echarts.apache.org/zh/option.html#aria)                          |
-| 'AxisPointerComponent'         | 坐标轴组件                                                                            |
-| 'BrushComponent'               | [区域选择组件](https://echarts.apache.org/zh/option.html#brush)                       |
-| 'CalendarComponent'            | [日历坐标系组件](https://echarts.apache.org/zh/option.html#calendar)                  |
-| 'DataZoomComponent'            | [区域缩放组件](https://echarts.apache.org/zh/option.html#dataZoom)                    |
-| 'DataZoomInsideComponent'      | [内置型数据区域缩放组件](https://echarts.apache.org/zh/option.html#dataZoom-inside)   |
-| 'DataZoomSliderComponent'      | [滑动条型数据区域缩放组件](https://echarts.apache.org/zh/option.html#dataZoom-slider) |
-| 'DatasetComponent'             | 数据集                                                                                |
-| 'GeoComponent'                 | 地理坐标系组件                                                                        |
-| 'GraphicComponent'             | [原生图形元素组件](https://echarts.apache.org/zh/option.html#graphic)                 |
-| 'GridComponent'                | 直角坐标系组件                                                                        |
-| 'GridSimpleComponent'          | -                                                                                     |
-| 'LegendComponent'              | 图例组件                                                                              |
-| 'LegendPlainComponent'         | 普通图例组件                                                                          |
-| 'LegendScrollComponent'        | 滚动翻页图例组件                                                                      |
-| 'MarkAreaComponent'            | -                                                                                     |
-| 'MarkLineComponent'            | -                                                                                     |
-| 'MarkPointComponent'           | -                                                                                     |
-| 'ParallelComponent'            | 平行坐标系组件                                                                        |
-| 'PolarComponent'               | 极坐标系组件                                                                          |
-| 'RadarComponent'               | 雷达图坐标系组件                                                                      |
-| 'SingleAxisComponent'          | [单轴组件](https://echarts.apache.org/zh/option.html#singleAxis)                      |
-| 'TimelineComponent'            | [时间线组件](https://echarts.apache.org/zh/option.html#timeline)                      |
-| 'TitleComponent'               | 标题组件                                                                              |
-| 'ToolboxComponent'             | [工具栏组件](https://echarts.apache.org/zh/option.html#toolbox)                       |
-| 'TooltipComponent'             | 浮层提示框组件                                                                        |
-| 'TransformComponent'           | 内置数据转换器组件                                                                    |
-| 'VisualMapComponent'           | [视觉映射组件](https://echarts.apache.org/zh/option.html#visualMap)                   |
-| 'VisualMapContinuousComponent' | [连续型视觉映射组件](https://echarts.apache.org/zh/option.html#visualMap-continuous)  |
-| 'VisualMapPiecewiseComponent'  | [分段型视觉映射组件](https://echarts.apache.org/zh/option.html#visualMap-piecewise)() |
+| AriaComponent                | [无障碍设置](https://echarts.apache.org/zh/option.html#aria)                          |
+| AxisPointerComponent         | 坐标轴组件                                                                            |
+| BrushComponent               | [区域选择组件](https://echarts.apache.org/zh/option.html#brush)                       |
+| CalendarComponent            | [日历坐标系组件](https://echarts.apache.org/zh/option.html#calendar)                  |
+| DataZoomComponent            | [区域缩放组件](https://echarts.apache.org/zh/option.html#dataZoom)                    |
+| DataZoomInsideComponent      | [内置型数据区域缩放组件](https://echarts.apache.org/zh/option.html#dataZoom-inside)   |
+| DataZoomSliderComponent      | [滑动条型数据区域缩放组件](https://echarts.apache.org/zh/option.html#dataZoom-slider) |
+| DatasetComponent             | 数据集                                                                                |
+| GeoComponent                 | 地理坐标系组件                                                                        |
+| GraphicComponent             | [原生图形元素组件](https://echarts.apache.org/zh/option.html#graphic)                 |
+| GridComponent                | 直角坐标系组件                                                                        |
+| GridSimpleComponent          | -                                                                                     |
+| LegendComponent              | 图例组件                                                                              |
+| LegendPlainComponent         | 普通图例组件                                                                          |
+| LegendScrollComponent        | 滚动翻页图例组件                                                                      |
+| MarkAreaComponent            | -                                                                                     |
+| MarkLineComponent            | -                                                                                     |
+| MarkPointComponent           | -                                                                                     |
+| ParallelComponent            | 平行坐标系组件                                                                        |
+| PolarComponent               | 极坐标系组件                                                                          |
+| RadarComponent               | 雷达图坐标系组件                                                                      |
+| SingleAxisComponent          | [单轴组件](https://echarts.apache.org/zh/option.html#singleAxis)                      |
+| TimelineComponent            | [时间线组件](https://echarts.apache.org/zh/option.html#timeline)                      |
+| TitleComponent               | 标题组件                                                                              |
+| ToolboxComponent             | [工具栏组件](https://echarts.apache.org/zh/option.html#toolbox)                       |
+| TooltipComponent             | 浮层提示框组件                                                                        |
+| TransformComponent           | 内置数据转换器组件                                                                    |
+| VisualMapComponent           | [视觉映射组件](https://echarts.apache.org/zh/option.html#visualMap)                   |
+| VisualMapContinuousComponent | [连续型视觉映射组件](https://echarts.apache.org/zh/option.html#visualMap-continuous)  |
+| VisualMapPiecewiseComponent  | [分段型视觉映射组件](https://echarts.apache.org/zh/option.html#visualMap-piecewise)() |
+
+
+
+## Echarts封装示例
+
+`d-charts`组件做了简单的封装：
+
+```vue
+<template>
+  <div ref="chartRef" class="chart"></div>
+</template>
+
+<script lang="ts">
+  import { ECharts, init } from 'echarts'
+  import { debounce } from 'lodash-es'
+
+  export default defineComponent({
+    props: {
+      option: {
+        type: Object,
+        default: () => {}
+      },
+      responsive: {
+        type: Boolean,
+        default: true
+      }
+    },
+    setup(props: any) {
+      const chartRef = ref<ECharts>()
+      let echartsInstance: ECharts | undefined
+
+      function resize() {
+        echartsInstance?.resize()
+      }
+
+      function destroy() {
+        if (props.responsive) {
+          window.removeEventListener('resize', resize)
+        }
+      }
+
+      onUnmounted(destroy)
+
+      onMounted(() => {
+        if (props.responsive) {
+          window.addEventListener('resize', debounce(resize, 200))
+        }
+        echartsInstance = init(chartRef.value as unknown as HTMLElement)
+        echartsInstance.setOption(props.option)
+      })
+
+      return { chartRef }
+    }
+  })
+</script>
+
+<style lang="scss" scoped>
+  .chart {
+    width: 100%;
+    height: 400px;
+  }
+</style>
+```
+
