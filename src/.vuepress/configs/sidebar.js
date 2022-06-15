@@ -84,6 +84,15 @@ const sidebar = {
       ]
     },
     {
+      text: '图表',
+      children: [
+        '/components/charts/amap',
+        '/components/charts/baidu',
+        '/components/charts/tencent',
+        '/components/charts/echarts'
+      ]
+    },
+    {
       text: '小组件',
       children: [
         '/components/sole/calendar-card',
